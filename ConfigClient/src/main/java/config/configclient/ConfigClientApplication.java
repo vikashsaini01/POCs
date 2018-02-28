@@ -19,7 +19,7 @@ public class ConfigClientApplication {
 @RestController
 class ControllerClass{
 	
-	@Value("${message}")
+	@Value("${message: message defaultValue}")
 	private String messageValue;
 	
 	@RequestMapping("/messages")
@@ -32,7 +32,7 @@ class ControllerClass{
 @RefreshScope
 class ControllerClass2{
 	
-	@Value("${holi}")
+	@Value("${holi: holi defaultValue}")
 	private String holiValue;
 	
 	@RequestMapping("/holi")
